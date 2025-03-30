@@ -11,18 +11,23 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.soldierzoom.misfortune.item.ModCreativeModeTab;
+import net.soldierzoom.misfortune.item.ModItems;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(MisfortuneMod.MOD_ID)
-public class MisfortuneMod {
+@Mod(Misfortune.MOD_ID)
+public class Misfortune {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "misfortune";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    public MisfortuneMod(FMLJavaModLoadingContext context) {
+    public Misfortune(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
+
+        ModItems.register(modEventBus);
+        ModCreativeModeTab.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -35,6 +40,7 @@ public class MisfortuneMod {
 
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
