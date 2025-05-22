@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "misfortune:item/night_fairy_soul"
+    "layer0": "misfortune:item/haunted_crescent"
   }
 }

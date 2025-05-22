@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "misfortune:aurum_log"
+    }
+  ],
+  "result": {
+    "item": "misfortune:aurum_planks",
+    "count": 4
+  }
+}

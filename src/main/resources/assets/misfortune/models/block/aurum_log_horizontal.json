@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column_horizontal",
+  "textures": {
+    "end": "misfortune:block/aurum_log_top",
+    "side": "misfortune:block/aurum_log"
+  }
+}
