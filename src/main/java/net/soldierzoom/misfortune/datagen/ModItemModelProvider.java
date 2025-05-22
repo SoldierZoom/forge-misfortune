@@ -17,9 +17,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
-        for(RegistryObject<Item> item : ModItems.ITEMS.getEntries()) {
-            simpleItem(item);
-        }
+        simpleItem(ModItems.HAUNTED_CRESCENT);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
