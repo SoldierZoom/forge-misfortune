@@ -11,6 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.soldierzoom.misfortune.block.ModBlocks;
 import net.soldierzoom.misfortune.item.ModCreativeModeTab;
 import net.soldierzoom.misfortune.item.ModItems;
 import org.slf4j.Logger;
@@ -27,6 +28,7 @@ public class Misfortune {
         IEventBus modEventBus = context.getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModCreativeModeTab.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);

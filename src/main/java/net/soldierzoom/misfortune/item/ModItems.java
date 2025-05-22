@@ -11,8 +11,8 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Misfortune.MOD_ID);
 
-    public static final RegistryObject<Item> NIGHT_FAIRY_SOUL =
-            ITEMS.register("night_fairy_soul",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> HAUNTED_CRESCENT =
+            ITEMS.register("haunted_crescent",() -> new Item(new Item.Properties().stacksTo(1)));
 
 
 

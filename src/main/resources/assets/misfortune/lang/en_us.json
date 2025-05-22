@@ -1,4 +1,9 @@
 {
-  "item.misfortune.night_fairy_soul": "Night Fairy's Soul",
+  "item.misfortune.haunted_crescent": "Haunted Crescent",
+
+  "block.misfortune.aurum_log": "Aurum Log",
+  "block.misfortune.aurum_wood": "Aurum Wood",
+  "block.misfortune.aurum_planks": "Aurum Planks",
+  "block.misfortune.caeruleum_planks": "Caeruleum Planks",
   "creativetab.misfortune_tab": "Misfortune"
 }
