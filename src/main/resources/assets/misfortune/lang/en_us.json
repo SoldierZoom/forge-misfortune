@@ -4,6 +4,11 @@
   "block.misfortune.aurum_log": "Aurum Log",
   "block.misfortune.aurum_wood": "Aurum Wood",
   "block.misfortune.aurum_planks": "Aurum Planks",
+  "block.misfortune.caeruleum_log": "Caeruleum Log",
+  "block.misfortune.caeruleum_wood": "Caeruleum Wood",
+  "block.misfortune.stripped_caeruleum_log": "Stripped Caeruleum Log",
+  "block.misfortune.stripped_caeruleum_wood": "Stripped Caeruleum Wood",
+  "block.misfortune.caeruleum_leaves": "Caeruleum Leaves",
   "block.misfortune.caeruleum_planks": "Caeruleum Planks",
   "creativetab.misfortune_tab": "Misfortune"
 }
