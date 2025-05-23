@@ -1,1 +1,7 @@
-// 1.20.1	2025-05-22T19:24:26.1820218	Recipes
+// 1.20.1	2025-05-23T16:53:43.9642661	Recipes
+c9d926286c07d8b188f69de07242a9ad61589650 data/misfortune/advancements/recipes/building_blocks/caeruleum_planks.json
+92589c4ac0e69b23b7730407a766812abc4a92e7 data/misfortune/advancements/recipes/building_blocks/caeruleum_wood.json
+be33254e54972e658f4acf275a62b80d950ee272 data/misfortune/advancements/recipes/building_blocks/stripped_caeruleum_wood.json
+6ee9facea75ac81722b47db7615bca243885fd92 data/misfortune/recipes/caeruleum_planks.json
+232f45aa02042e508f540f378be1844d906d0437 data/misfortune/recipes/caeruleum_wood.json
+4bd1d071146e805ab44969955f119380b93e73ee data/misfortune/recipes/stripped_caeruleum_wood.json

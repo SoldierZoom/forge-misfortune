@@ -1,5 +1,10 @@
-// 1.20.1	2025-05-22T19:24:26.1820218	Loot Tables
+// 1.20.1	2025-05-23T01:46:17.896028	Loot Tables
 726173909a7f8661ec7b8aabf1d910b025840b91 data/misfortune/loot_tables/blocks/aurum_log.json
 7ae22909060c1c3c5567987c7f7896fa36cc8959 data/misfortune/loot_tables/blocks/aurum_planks.json
 aa210bf5decec9945c30ed7c32134fe34a8b4a8b data/misfortune/loot_tables/blocks/aurum_wood.json
+4b1596334c685a44441dcabbd112c769ab0e8655 data/misfortune/loot_tables/blocks/caeruleum_leaves.json
+445992518ead11eea5b05961be8037cb50be536f data/misfortune/loot_tables/blocks/caeruleum_log.json
 85806e0a59f4f19bf7b479af306ca76797523d6b data/misfortune/loot_tables/blocks/caeruleum_planks.json
+1339e19b317f9c649c18a34c3f79bc1e9bac2973 data/misfortune/loot_tables/blocks/caeruleum_wood.json
+b85efc34915f470d362403dd97210e6ff4b5d284 data/misfortune/loot_tables/blocks/stripped_caeruleum_log.json
+e3a4e78a471cd292d5e5aa7a4a978bea18e84ff5 data/misfortune/loot_tables/blocks/stripped_caeruleum_wood.json
