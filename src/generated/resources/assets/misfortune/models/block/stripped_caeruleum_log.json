@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "misfortune:block/stripped_caeruleum_log_top",
+    "side": "misfortune:block/stripped_caeruleum_log"
+  }
+}

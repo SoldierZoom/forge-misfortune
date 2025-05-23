@@ -10,18 +10,25 @@ import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.soldierzoom.misfortune.Misfortune;
 import net.soldierzoom.misfortune.block.ModBlocks;
+import net.soldierzoom.misfortune.util.ModTags;
 
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
+
+
     public ModRecipeProvider(PackOutput pOutput) {
         super(pOutput);
     }
 
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+
+        planksFromLogs(consumer, ModBlocks.CAERULEUM_PLANKS.get(), ModTags.Items.CAERULEUM_LOGS,4);
+        woodFromLogs(consumer, ModBlocks.CAERULEUM_WOOD.get(),ModBlocks.CAERULEUM_LOG.get());
+        woodFromLogs(consumer, ModBlocks.STRIPPED_CAERULEUM_WOOD.get(),ModBlocks.STRIPPED_CAERULEUM_LOG.get());
     }
 
 

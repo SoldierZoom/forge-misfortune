@@ -3,9 +3,13 @@ package net.soldierzoom.misfortune.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.soldierzoom.misfortune.Misfortune;
+import net.soldierzoom.misfortune.block.ModBlocks;
+import net.soldierzoom.misfortune.util.ModTags;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -18,6 +22,13 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-
+        //copying block tags
+        //minecraft tags
+        copy(BlockTags.LOGS,ItemTags.LOGS);
+        copy(BlockTags.PLANKS,ItemTags.PLANKS);
+        copy(BlockTags.LEAVES,ItemTags.LEAVES);
+        //mod tags
+        copy(ModTags.Blocks.AURUM_LOGS,ModTags.Items.AURUM_LOGS);
+        copy(ModTags.Blocks.CAERULEUM_LOGS,ModTags.Items.CAERULEUM_LOGS);
     }
 }

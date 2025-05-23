@@ -21,13 +21,21 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     protected void addTags(HolderLookup.Provider provider) {
         //minecraft tags
         this.tag(BlockTags.LOGS)
-                .addTag(ModTags.Blocks.AURUM_LOGS);
+                .addTag(ModTags.Blocks.AURUM_LOGS)
+                .addTag(ModTags.Blocks.CAERULEUM_LOGS);
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.AURUM_PLANKS.get())
                 .add(ModBlocks.CAERULEUM_PLANKS.get());
+        this.tag(BlockTags.LEAVES)
+                .add(ModBlocks.CAERULEUM_LEAVES.get());
         //mod tags
         this.tag(ModTags.Blocks.AURUM_LOGS)
                 .add(ModBlocks.AURUM_LOG.get())
                 .add(ModBlocks.AURUM_WOOD.get());
+        this.tag(ModTags.Blocks.CAERULEUM_LOGS)
+                .add(ModBlocks.CAERULEUM_LOG.get())
+                .add(ModBlocks.CAERULEUM_WOOD.get())
+                .add(ModBlocks.STRIPPED_CAERULEUM_LOG.get())
+                .add(ModBlocks.STRIPPED_CAERULEUM_WOOD.get());
     }
 }
