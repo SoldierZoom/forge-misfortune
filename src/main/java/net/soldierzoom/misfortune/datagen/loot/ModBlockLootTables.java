@@ -1,13 +1,10 @@
 package net.soldierzoom.misfortune.datagen.loot;
 
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.RegistryObject;
 import net.soldierzoom.misfortune.Misfortune;
 import net.soldierzoom.misfortune.block.ModBlocks;
@@ -23,18 +20,17 @@ public class ModBlockLootTables extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        //aurum wood
-        this.dropSelf(ModBlocks.AURUM_LOG.get());
-        this.dropSelf(ModBlocks.AURUM_WOOD.get());
-        this.dropSelf(ModBlocks.AURUM_PLANKS.get());
-        //caeruleum wood
-        this.dropSelf(ModBlocks.CAERULEUM_LOG.get());
-        this.dropSelf(ModBlocks.CAERULEUM_WOOD.get());
-        this.dropSelf(ModBlocks.STRIPPED_CAERULEUM_LOG.get());
-        this.dropSelf(ModBlocks.STRIPPED_CAERULEUM_WOOD.get());
-        this.dropSelf(ModBlocks.CAERULEUM_PLANKS.get());
-        this.add(ModBlocks.CAERULEUM_LEAVES.get(), block ->
-                createLeavesDrops(block,ModBlocks.AURUM_PLANKS.get(), NORMAL_LEAVES_SAPLING_CHANCES));//TODO: CHANGE TO SAPLING
+        //Murkwood wood
+        this.dropSelf(ModBlocks.MURKWOOD_LOG.get());
+        this.dropSelf(ModBlocks.MURKWOOD_WOOD.get());
+        this.dropSelf(ModBlocks.STRIPPED_MURKWOOD_LOG.get());
+        this.dropSelf(ModBlocks.STRIPPED_MURKWOOD_WOOD.get());
+        this.dropSelf(ModBlocks.MURKWOOD_PLANKS.get());
+        this.dropSelf(ModBlocks.MURKWOOD_STAIRS.get());
+        this.add(ModBlocks.MURKWOOD_LEAVES.get(), block ->
+                createLeavesDrops(block,ModBlocks.MURKWOOD_DOOR.get(), NORMAL_LEAVES_SAPLING_CHANCES));//TODO: CHANGE TO SAPLING
+        this.add(ModBlocks.MURKWOOD_DOOR.get(), block ->
+                createDoorTable(ModBlocks.MURKWOOD_DOOR.get()));
     }
 
     @Override

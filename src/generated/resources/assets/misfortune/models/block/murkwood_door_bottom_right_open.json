@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "misfortune:block/murkwood_door_bottom",
+    "top": "misfortune:block/murkwood_door_top"
+  }
+}

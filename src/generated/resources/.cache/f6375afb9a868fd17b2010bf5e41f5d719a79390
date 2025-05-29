@@ -1,6 +1,7 @@
-// 1.20.1	2025-05-23T02:57:12.19328	Tags for minecraft:item mod id misfortune
-7a5533cb6fa9156d38acf3476dde3a0917d3eb4e data/minecraft/tags/items/leaves.json
-c92351963ef8d6f7aa5ce0958e8e8e5a8b505699 data/minecraft/tags/items/logs.json
-68823add5419443e19a188936804be3d5e421b04 data/minecraft/tags/items/planks.json
-801357a8b3c69464d5454e1514f0ed2d6e6d5400 data/misfortune/tags/items/aurum_logs.json
-00bc480804e10758da25dfb0501f34d58a97c437 data/misfortune/tags/items/caeruleum_logs.json
+// 1.20.1	2025-05-24T23:51:51.663257	Tags for minecraft:item mod id misfortune
+6d3935271b3be54f221c17a3f0ba8dca2ea552c9 data/minecraft/tags/items/doors.json
+62483088ff3b606dc8018f4b4c22a03f8f2b4a4a data/minecraft/tags/items/leaves.json
+4e65e90458103191386a384b1e3240152d98e20e data/minecraft/tags/items/logs.json
+5b181498e39d37fc4ef092964832fbc552d62c71 data/minecraft/tags/items/planks.json
+7126f3b44a45001ebc990a183e5a6d9586586fe2 data/minecraft/tags/items/stairs.json
+ea723649ea5be49f5750ec96f3ac34fb60644180 data/misfortune/tags/items/murkwood_logs.json

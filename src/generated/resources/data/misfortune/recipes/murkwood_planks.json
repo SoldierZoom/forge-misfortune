@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "misfortune:murkwood_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "item": "misfortune:murkwood_planks"
+  }
+}

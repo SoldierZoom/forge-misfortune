@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "misfortune:block/stripped_murkwood_log_top",
+    "side": "misfortune:block/stripped_murkwood_log"
+  }
+}

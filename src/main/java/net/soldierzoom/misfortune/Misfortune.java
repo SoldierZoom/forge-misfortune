@@ -1,6 +1,8 @@
 package net.soldierzoom.misfortune;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -14,6 +16,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.soldierzoom.misfortune.block.ModBlocks;
 import net.soldierzoom.misfortune.item.ModCreativeModeTab;
 import net.soldierzoom.misfortune.item.ModItems;
+import net.soldierzoom.misfortune.util.ModWoodTypes;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -55,6 +58,7 @@ public class Misfortune {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            Sheets.addWoodType(ModWoodTypes.MURKWOOD);
         }
     }
 }

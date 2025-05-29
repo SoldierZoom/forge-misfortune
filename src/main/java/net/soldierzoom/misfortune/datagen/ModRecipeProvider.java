@@ -26,9 +26,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
-        planksFromLogs(consumer, ModBlocks.CAERULEUM_PLANKS.get(), ModTags.Items.CAERULEUM_LOGS,4);
-        woodFromLogs(consumer, ModBlocks.CAERULEUM_WOOD.get(),ModBlocks.CAERULEUM_LOG.get());
-        woodFromLogs(consumer, ModBlocks.STRIPPED_CAERULEUM_WOOD.get(),ModBlocks.STRIPPED_CAERULEUM_LOG.get());
+        planksFromLogs(consumer, ModBlocks.MURKWOOD_PLANKS.get(), ModTags.Items.MURKWOOD_LOGS,4);
+        woodFromLogs(consumer, ModBlocks.MURKWOOD_WOOD.get(),ModBlocks.MURKWOOD_LOG.get());
+        woodFromLogs(consumer, ModBlocks.STRIPPED_MURKWOOD_WOOD.get(),ModBlocks.STRIPPED_MURKWOOD_LOG.get());
+        XFromPlanks(consumer,stairBuilder(ModBlocks.MURKWOOD_STAIRS.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
+        XFromPlanks(consumer,doorBuilder(ModBlocks.MURKWOOD_DOOR.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
     }
 
 
@@ -54,5 +56,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                     has(itemlike)).save(pFinishedRecipeConsumer, Misfortune.MOD_ID + ":" + (pResult) + pRecipeName + "_" + getItemName(itemlike));
         }
 
+    }
+    //wood
+    protected static void XFromPlanks(Consumer<FinishedRecipe> consumer, RecipeBuilder recipeBuilder, ItemLike pPlanks) {
+        recipeBuilder.unlockedBy("has_planks", has(pPlanks)).save(consumer);
     }
 }

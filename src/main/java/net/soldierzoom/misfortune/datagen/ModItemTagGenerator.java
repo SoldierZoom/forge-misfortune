@@ -27,8 +27,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         copy(BlockTags.LOGS,ItemTags.LOGS);
         copy(BlockTags.PLANKS,ItemTags.PLANKS);
         copy(BlockTags.LEAVES,ItemTags.LEAVES);
+        copy(BlockTags.WOODEN_DOORS,ItemTags.WOODEN_DOORS);
+        copy(BlockTags.WOODEN_STAIRS,ItemTags.WOODEN_STAIRS);
         //mod tags
-        copy(ModTags.Blocks.AURUM_LOGS,ModTags.Items.AURUM_LOGS);
-        copy(ModTags.Blocks.CAERULEUM_LOGS,ModTags.Items.CAERULEUM_LOGS);
+        copy(ModTags.Blocks.MURKWOOD_LOGS,ModTags.Items.MURKWOOD_LOGS);
     }
 }
