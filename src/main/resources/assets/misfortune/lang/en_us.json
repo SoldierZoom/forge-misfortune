@@ -1,14 +1,17 @@
 {
+  "creativetab.misfortune_tab": "Misfortune",
+
+
   "item.misfortune.haunted_crescent": "Haunted Crescent",
 
-  "block.misfortune.aurum_log": "Aurum Log",
-  "block.misfortune.aurum_wood": "Aurum Wood",
-  "block.misfortune.aurum_planks": "Aurum Planks",
+
   "block.misfortune.murkwood_log": "Murkwood Log",
   "block.misfortune.murkwood_wood": "Murkwood Wood",
   "block.misfortune.stripped_murkwood_log": "Stripped Murkwood Log",
   "block.misfortune.stripped_murkwood_wood": "Stripped Murkwood Wood",
   "block.misfortune.murkwood_leaves": "Murkwood Leaves",
+  "block.misfortune.murkwood_sapling": "Murkwood Sapling",
   "block.misfortune.murkwood_planks": "Murkwood Planks",
-  "creativetab.misfortune_tab": "Misfortune"
+  "block.misfortune.murkwood_stairs": "Murkwood Stairs",
+  "block.misfortune.murkwood_door": "Murkwood Door"
 }

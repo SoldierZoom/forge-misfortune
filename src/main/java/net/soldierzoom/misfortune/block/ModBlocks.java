@@ -15,6 +15,7 @@ import net.soldierzoom.misfortune.Misfortune;
 import net.soldierzoom.misfortune.block.custom.ModRotatedPillarBlock;
 import net.soldierzoom.misfortune.item.ModItems;
 import net.soldierzoom.misfortune.util.ModWoodTypes;
+import net.soldierzoom.misfortune.worldgen.tree.MurkwoodTreeGrower;
 
 import java.util.function.Supplier;
 
@@ -23,11 +24,6 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, Misfortune.MOD_ID);
 
     //Murkwood Wood
-    public static final RegistryObject<Block> MURKWOOD_LEAVES = registerBlock("murkwood_leaves",
-            () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.4F).randomTicks().sound(SoundType.GRASS)
-                    .noOcclusion().isValidSpawn((state, getter, pos, entityType) -> false).isSuffocating((state, getter, pos) -> false)
-                    .isViewBlocking((state, getter, pos) -> false).pushReaction(PushReaction.DESTROY).isRedstoneConductor((state, getter, pos) -> false)
-            ));
     //logs
     public static final RegistryObject<Block> MURKWOOD_LOG = registerBlock("murkwood_log",
             () -> new ModRotatedPillarBlock(TopSideMapColour(BlockBehaviour.Properties.copy(Blocks.WARPED_STEM),
@@ -70,6 +66,20 @@ public class ModBlocks {
                     .strength(6F)
                     ,ModWoodTypes.MURKWOOD.setType()
             ));
+    //leaves & sapling
+    public static final RegistryObject<Block> MURKWOOD_LEAVES = registerBlock("murkwood_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).strength(0.4F).randomTicks().sound(SoundType.GRASS)
+                    .noOcclusion().isValidSpawn((state, getter, pos, entityType) -> false).isSuffocating((state, getter, pos) -> false)
+                    .isViewBlocking((state, getter, pos) -> false).pushReaction(PushReaction.DESTROY).isRedstoneConductor((state, getter, pos) -> false)
+            ));
+    public static final RegistryObject<Block> MURKWOOD_SAPLING = registerBlock("murkwood_sapling",
+            () -> new SaplingBlock(new MurkwoodTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)
+                    .mapColor(MapColor.PLANT)
+            ));
+    //signs & boats
+    //TBA
+
+
 
 
     private static BlockBehaviour.Properties TopSideMapColour(BlockBehaviour.Properties pProperties, MapColor topCol, MapColor sideCol) {

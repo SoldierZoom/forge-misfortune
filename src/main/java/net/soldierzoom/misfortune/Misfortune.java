@@ -17,6 +17,8 @@ import net.soldierzoom.misfortune.block.ModBlocks;
 import net.soldierzoom.misfortune.item.ModCreativeModeTab;
 import net.soldierzoom.misfortune.item.ModItems;
 import net.soldierzoom.misfortune.util.ModWoodTypes;
+import net.soldierzoom.misfortune.worldgen.tree.ModFoliagePlacers;
+import net.soldierzoom.misfortune.worldgen.tree.ModTrunkPlacerTypes;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -30,9 +32,13 @@ public class Misfortune {
     public Misfortune(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
 
+        ModCreativeModeTab.register(modEventBus);
+
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModCreativeModeTab.register(modEventBus);
+
+        ModTrunkPlacerTypes.register(modEventBus);
+        ModFoliagePlacers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 

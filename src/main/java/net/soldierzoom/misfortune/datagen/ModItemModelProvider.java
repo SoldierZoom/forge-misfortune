@@ -20,7 +20,10 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
         simpleItem(ModItems.HAUNTED_CRESCENT);
-        simpleBlockItem(ModBlocks.MURKWOOD_DOOR);
+        simpleBlockItem(ModBlocks.MURKWOOD_DOOR,"item");
+        simpleBlockItem(ModBlocks.MURKWOOD_SAPLING);
+
+
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
@@ -28,10 +31,13 @@ public class ModItemModelProvider extends ItemModelProvider {
                 ResourceLocation.tryParse("item/generated")).texture("layer0",
                 ResourceLocation.tryBuild(Misfortune.MOD_ID,"item/"+item.getId().getPath()));
     }
-    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> block) {
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> block,String path) {
         return withExistingParent(block.getId().getPath(),
                 ResourceLocation.tryParse("item/generated")).texture("layer0",
-                ResourceLocation.tryBuild(Misfortune.MOD_ID,"item/"+block.getId().getPath()));
+                ResourceLocation.tryBuild(Misfortune.MOD_ID,path+"/"+block.getId().getPath()));
+    }
+    private ItemModelBuilder simpleBlockItem(RegistryObject<Block> block) {
+        return simpleBlockItem(block,"block");
     }
 
 }

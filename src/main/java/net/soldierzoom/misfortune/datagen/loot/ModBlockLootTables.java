@@ -28,9 +28,10 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.MURKWOOD_PLANKS.get());
         this.dropSelf(ModBlocks.MURKWOOD_STAIRS.get());
         this.add(ModBlocks.MURKWOOD_LEAVES.get(), block ->
-                createLeavesDrops(block,ModBlocks.MURKWOOD_DOOR.get(), NORMAL_LEAVES_SAPLING_CHANCES));//TODO: CHANGE TO SAPLING
+                createLeavesDrops(block,ModBlocks.MURKWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
         this.add(ModBlocks.MURKWOOD_DOOR.get(), block ->
                 createDoorTable(ModBlocks.MURKWOOD_DOOR.get()));
+        this.dropSelf(ModBlocks.MURKWOOD_SAPLING.get());
     }
 
     @Override
