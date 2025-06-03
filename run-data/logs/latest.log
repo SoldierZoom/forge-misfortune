@@ -1,29 +1,31 @@
-[24May2025 23:51:44.151] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\ajayw\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, misfortune, --all, --output, D:\Desktop\forge-misfortune\src\generated\resources, --existing, D:\Desktop\forge-misfortune\src\main\resources]
-[24May2025 23:51:44.155] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.14 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[24May2025 23:51:44.282] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[24May2025 23:51:44.344] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/ajayw/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[24May2025 23:51:44.645] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ajayw\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.0\f0c0b352173d0a378cbdcec9cfc4ba65899a721\javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[24May2025 23:51:44.650] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ajayw\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.0\e862740d8c84d08dbfedea412bef88fe42e727c5\lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[24May2025 23:51:44.653] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ajayw\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.0\5719b3a297a33f877ed5dde4cb4bd75c859096af\mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
-[24May2025 23:51:44.659] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ajayw\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.0\235975dafa4309945b59c56b53f31dc5b65a6051\fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
-[24May2025 23:51:44.733] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[24May2025 23:51:45.965] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\ajayw\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, misfortune, --all, --output, D:\Desktop\forge-misfortune\src\generated\resources, --existing, D:\Desktop\forge-misfortune\src\main\resources]
-[24May2025 23:51:46.295] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [misfortune]
-[24May2025 23:51:50.746] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
-[24May2025 23:51:50.749] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
-[24May2025 23:51:51.236] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/ajayw/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[24May2025 23:51:51.237] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/ajayw/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[24May2025 23:51:51.389] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[24May2025 23:51:51.428] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 38 ms
-[24May2025 23:51:51.429] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[24May2025 23:51:51.491] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 62 ms
-[24May2025 23:51:51.491] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: misfortune
-[24May2025 23:51:51.636] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: misfortune finished after 144 ms
-[24May2025 23:51:51.636] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: misfortune
-[24May2025 23:51:51.638] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: misfortune finished after 1 ms
-[24May2025 23:51:51.638] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id misfortune
-[24May2025 23:51:51.654] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id misfortune finished after 15 ms
-[24May2025 23:51:51.654] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id misfortune
-[24May2025 23:51:51.657] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id misfortune finished after 2 ms
-[24May2025 23:51:51.657] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 268 ms
-[24May2025 23:51:51.686] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 133, old count: 76, new count: 69, removed stale: 65, written: 67
+[03Jun2025 02:28:49.128] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\ajayw\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.0, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, misfortune, --all, --output, D:\Desktop\forge-misfortune\src\generated\resources, --existing, D:\Desktop\forge-misfortune\src\main\resources]
+[03Jun2025 02:28:49.132] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.14 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[03Jun2025 02:28:49.263] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[03Jun2025 02:28:49.320] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/ajayw/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[03Jun2025 02:28:49.648] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ajayw\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.0\f0c0b352173d0a378cbdcec9cfc4ba65899a721\javafmllanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[03Jun2025 02:28:49.653] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ajayw\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.0\e862740d8c84d08dbfedea412bef88fe42e727c5\lowcodelanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[03Jun2025 02:28:49.657] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ajayw\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.0\5719b3a297a33f877ed5dde4cb4bd75c859096af\mclanguage-1.20.1-47.4.0.jar is missing mods.toml file
+[03Jun2025 02:28:49.662] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\ajayw\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.0\235975dafa4309945b59c56b53f31dc5b65a6051\fmlcore-1.20.1-47.4.0.jar is missing mods.toml file
+[03Jun2025 02:28:49.736] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[03Jun2025 02:28:51.370] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\ajayw\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, misfortune, --all, --output, D:\Desktop\forge-misfortune\src\generated\resources, --existing, D:\Desktop\forge-misfortune\src\main\resources]
+[03Jun2025 02:28:51.743] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [misfortune]
+[03Jun2025 02:28:56.523] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.0, for MC 1.20.1 with MCP 20230612.114412
+[03Jun2025 02:28:56.528] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.0 Initialized
+[03Jun2025 02:28:56.972] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/ajayw/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[03Jun2025 02:28:56.973] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/ajayw/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.0_mapped_parchment_2023.09.03-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[03Jun2025 02:28:57.138] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[03Jun2025 02:28:57.183] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 42 ms
+[03Jun2025 02:28:57.183] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[03Jun2025 02:28:57.250] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 67 ms
+[03Jun2025 02:28:57.250] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: misfortune
+[03Jun2025 02:28:57.429] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: misfortune finished after 178 ms
+[03Jun2025 02:28:57.429] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: misfortune
+[03Jun2025 02:28:57.430] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: misfortune finished after 1 ms
+[03Jun2025 02:28:57.430] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id misfortune
+[03Jun2025 02:28:57.444] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id misfortune finished after 13 ms
+[03Jun2025 02:28:57.444] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id misfortune
+[03Jun2025 02:28:57.446] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id misfortune finished after 1 ms
+[03Jun2025 02:28:57.446] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[03Jun2025 02:28:57.459] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 13 ms
+[03Jun2025 02:28:57.459] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 320 ms
+[03Jun2025 02:28:57.468] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 73, old count: 73, new count: 74, removed stale: 0, written: 1
