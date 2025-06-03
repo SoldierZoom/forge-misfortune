@@ -25,7 +25,7 @@ public class ModConfiguredFeatures {
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         register(context, MURKWOOD_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.MURKWOOD_LOG.get()),
-                new MurkwoodTrunkPlacer(8,3,2),
+                new MurkwoodTrunkPlacer(9,3,3),
 
                 BlockStateProvider.simple(ModBlocks.MURKWOOD_LEAVES.get()),
                 new MurkwoodFoliagePlacer(ConstantInt.of(3),ConstantInt.of(0),4),

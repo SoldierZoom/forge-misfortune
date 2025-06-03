@@ -43,8 +43,8 @@ public class MurkwoodFoliagePlacer extends FoliagePlacer {
 
             for (int dx = -layerRadius; dx <= layerRadius; dx++) {
                 for (int dz = -layerRadius; dz <= layerRadius; dz++) {
-                    int distance = Math.abs(dx) + Math.abs(dz);
-                    if (distance > layerRadius + (pRandom.nextBoolean() ? 0 : -1)) continue;
+                    int manhattanDist = Math.abs(dx) + Math.abs(dz);
+                    if (manhattanDist > layerRadius + (pRandom.nextBoolean() ? 0 : -1)) continue;
 
                     BlockPos leafPos = pos.offset(dx, -y, dz);
 
@@ -52,9 +52,10 @@ public class MurkwoodFoliagePlacer extends FoliagePlacer {
                         pBlockSetter.set(leafPos, pConfig.foliageProvider.getState(pRandom, leafPos));
                     }
 
-                    // Stronger droopy effect: place vertical hanging leaves at edges
-                    if (distance >= layerRadius - 1 && pRandom.nextFloat() < 0.6f) {
-                        int maxHang = 1 + pRandom.nextInt(3); // 1 to 3 blocks hanging
+                    //Hanging Leaves
+                    boolean isOuterEdge = manhattanDist >= layerRadius - 1;
+                    if (isOuterEdge && pRandom.nextFloat() < 0.7f) { // Chance to hang
+                        int maxHang = 1 + pRandom.nextInt(4); // 1 to 4 blocks
                         BlockPos hangPos = leafPos.below();
 
                         for (int h = 0; h < maxHang; h++) {
