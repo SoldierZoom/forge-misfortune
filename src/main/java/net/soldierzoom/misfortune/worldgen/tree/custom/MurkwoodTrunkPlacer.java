@@ -74,9 +74,12 @@ public class MurkwoodTrunkPlacer extends TrunkPlacer {
                     this.placeLog(pLevel,pBlockSetter,pRandom,baseTrunkPos[i+4].above(y),pConfig);
                 }
             }
-            setDirtAt(pLevel,pBlockSetter,pRandom,baseTrunkPos[i].below(),pConfig);
-            //only placing dirt if log above
-            if(baseCornerTrunkHeights.get(i)>0) {
+            //only placing dirt if free block below
+            if(isFree(pLevel,baseTrunkPos[i].below())) {
+                setDirtAt(pLevel,pBlockSetter,pRandom,baseTrunkPos[i].below(),pConfig);
+            }
+            //only placing dirt if log above & free block below
+            if(baseCornerTrunkHeights.get(i)>0&&isFree(pLevel,baseTrunkPos[i+4].below())) {
                 setDirtAt(pLevel,pBlockSetter,pRandom,baseTrunkPos[i+4].below(),pConfig);
             }
         }
