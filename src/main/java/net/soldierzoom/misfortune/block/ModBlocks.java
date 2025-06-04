@@ -59,7 +59,22 @@ public class ModBlocks {
             () -> new StairBlock(() -> MURKWOOD_PLANKS.get().defaultBlockState(),
                     BlockBehaviour.Properties.copy(MURKWOOD_PLANKS.get())
             ));
-
+    public static final RegistryObject<Block> MURKWOOD_SLAB = registerBlock("murkwood_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_SLAB)
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(4F,6F)
+            ));
+    public static final RegistryObject<Block> MURKWOOD_FENCE = registerBlock("murkwood_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_FENCE)
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(4F,6F)
+            ));
+    public static final RegistryObject<Block> MURKWOOD_FENCE_GATE = registerBlock("murkwood_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_FENCE_GATE)
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(4F,6F),
+                    ModWoodTypes.MURKWOOD
+            ));
     public static final RegistryObject<Block> MURKWOOD_DOOR = registerBlock("murkwood_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_DOOR)
                     .mapColor(MapColor.DIAMOND)

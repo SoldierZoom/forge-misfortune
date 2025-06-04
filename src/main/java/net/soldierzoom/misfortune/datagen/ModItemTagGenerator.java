@@ -7,6 +7,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.tags.ITag;
 import net.soldierzoom.misfortune.Misfortune;
 import net.soldierzoom.misfortune.block.ModBlocks;
 import net.soldierzoom.misfortune.util.ModTags;
@@ -29,6 +30,9 @@ public class ModItemTagGenerator extends ItemTagsProvider {
         copy(BlockTags.LEAVES,ItemTags.LEAVES);
         copy(BlockTags.WOODEN_DOORS,ItemTags.WOODEN_DOORS);
         copy(BlockTags.WOODEN_STAIRS,ItemTags.WOODEN_STAIRS);
+        copy(BlockTags.WOODEN_SLABS,ItemTags.WOODEN_SLABS);
+        copy(BlockTags.WOODEN_FENCES,ItemTags.WOODEN_FENCES);
+        copy(BlockTags.FENCE_GATES, ItemTags.FENCE_GATES);
         //mod tags
         copy(ModTags.Blocks.MURKWOOD_LOGS,ModTags.Items.MURKWOOD_LOGS);
     }

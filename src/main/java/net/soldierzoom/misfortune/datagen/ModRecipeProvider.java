@@ -5,7 +5,6 @@ import net.minecraft.data.recipes.*;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.world.item.crafting.ShapelessRecipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 import net.soldierzoom.misfortune.Misfortune;
@@ -31,6 +30,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         woodFromLogs(consumer, ModBlocks.STRIPPED_MURKWOOD_WOOD.get(),ModBlocks.STRIPPED_MURKWOOD_LOG.get());
         XFromPlanks(consumer,stairBuilder(ModBlocks.MURKWOOD_STAIRS.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
         XFromPlanks(consumer,doorBuilder(ModBlocks.MURKWOOD_DOOR.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
+        XFromPlanks(consumer,slabBuilder(RecipeCategory.BUILDING_BLOCKS,ModBlocks.MURKWOOD_SLAB.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
+        XFromPlanks(consumer,fenceBuilder(ModBlocks.MURKWOOD_FENCE.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
+        XFromPlanks(consumer,fenceGateBuilder(ModBlocks.MURKWOOD_FENCE_GATE.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
     }
 
 

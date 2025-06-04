@@ -1,5 +1,6 @@
 package net.soldierzoom.misfortune.datagen;
 
+import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -47,6 +48,21 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.MURKWOOD_PLANKS.get())
         );
         blockItem(ModBlocks.MURKWOOD_STAIRS);
+
+        /*slabBlock(((SlabBlock) ModBlocks.MURKWOOD_SLAB.get()),
+                blockTexture(ModBlocks.MURKWOOD_PLANKS.get()),
+                blockTexture(ModBlocks.MURKWOOD_PLANKS.get())
+        );*/
+        blockItem(ModBlocks.MURKWOOD_SLAB);
+
+        fenceBlock(((FenceBlock) ModBlocks.MURKWOOD_FENCE.get()),
+                blockTexture(ModBlocks.MURKWOOD_PLANKS.get())
+        );
+
+        fenceGateBlock(((FenceGateBlock) ModBlocks.MURKWOOD_FENCE_GATE.get()),
+                blockTexture(ModBlocks.MURKWOOD_PLANKS.get())
+        );
+        blockItem(ModBlocks.MURKWOOD_FENCE_GATE);
 
         blockWithItem(ModBlocks.MURKWOOD_PLANKS);
         leavesBlock(ModBlocks.MURKWOOD_LEAVES);

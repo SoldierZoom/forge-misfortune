@@ -30,6 +30,12 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.MURKWOOD_DOOR.get());
         this.tag(BlockTags.WOODEN_STAIRS)
                 .add(ModBlocks.MURKWOOD_STAIRS.get());
+        this.tag(BlockTags.WOODEN_SLABS)
+                .add(ModBlocks.MURKWOOD_SLAB.get());
+        this.tag(BlockTags.WOODEN_FENCES)
+                .add(ModBlocks.MURKWOOD_FENCE.get());
+        this.tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.MURKWOOD_FENCE_GATE.get());
         //mod tags
         this.tag(ModTags.Blocks.MURKWOOD_LOGS)
                 .add(ModBlocks.MURKWOOD_LOG.get())
