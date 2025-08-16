@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "misfortune:block/murkwood_slab"
+    },
+    "type=double": {
+      "model": "misfortune:block/murkwood_planks"
+    },
+    "type=top": {
+      "model": "misfortune:block/murkwood_slab_top"
+    }
+  }
+}

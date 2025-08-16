@@ -28,7 +28,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         );
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_MURKWOOD_LOG.get()),
                 blockTexture(ModBlocks.STRIPPED_MURKWOOD_LOG.get()),
-                ResourceLocation.tryBuild(Misfortune.MOD_ID,"block/stripped_murkwood_log_top")
+                ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID,"block/stripped_murkwood_log_top")
         );
         axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_MURKWOOD_WOOD.get()),
                 blockTexture(ModBlocks.STRIPPED_MURKWOOD_LOG.get()),
@@ -38,21 +38,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.MURKWOOD_WOOD);
         blockItem(ModBlocks.STRIPPED_MURKWOOD_LOG);
         blockItem(ModBlocks.STRIPPED_MURKWOOD_WOOD);
+        blockWithItem(ModBlocks.MURKWOOD_PLANKS);
 
-        doorBlockWithRenderType(((DoorBlock) ModBlocks.MURKWOOD_DOOR.get()),
-                ResourceLocation.tryBuild(Misfortune.MOD_ID,"block/murkwood_door_bottom"),
-                ResourceLocation.tryBuild(Misfortune.MOD_ID,"block/murkwood_door_top"),
-                "cutout"
-        );
+
         stairsBlock(((StairBlock) ModBlocks.MURKWOOD_STAIRS.get()),
                 blockTexture(ModBlocks.MURKWOOD_PLANKS.get())
         );
         blockItem(ModBlocks.MURKWOOD_STAIRS);
 
-        /*slabBlock(((SlabBlock) ModBlocks.MURKWOOD_SLAB.get()),
+        slabBlock(((SlabBlock) ModBlocks.MURKWOOD_SLAB.get()),
                 blockTexture(ModBlocks.MURKWOOD_PLANKS.get()),
                 blockTexture(ModBlocks.MURKWOOD_PLANKS.get())
-        );*/
+        );
         blockItem(ModBlocks.MURKWOOD_SLAB);
 
         fenceBlock(((FenceBlock) ModBlocks.MURKWOOD_FENCE.get()),
@@ -64,11 +61,32 @@ public class ModBlockStateProvider extends BlockStateProvider {
         );
         blockItem(ModBlocks.MURKWOOD_FENCE_GATE);
 
-        blockWithItem(ModBlocks.MURKWOOD_PLANKS);
+        doorBlockWithRenderType(((DoorBlock) ModBlocks.MURKWOOD_DOOR.get()),
+                ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID,"block/murkwood_door_bottom"),
+                ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID,"block/murkwood_door_top"),
+                "cutout"
+        );
+        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.MURKWOOD_TRAPDOOR.get()),
+                ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID,"block/murkwood_trapdoor"),
+                true,
+                "cutout"
+        );
+        blockItem(ModBlocks.MURKWOOD_TRAPDOOR);
+
+
+        pressurePlateBlock(((PressurePlateBlock) ModBlocks.MURKWOOD_PRESSURE_PLATE.get()),
+                blockTexture(ModBlocks.MURKWOOD_PLANKS.get())
+        );
+        blockItem(ModBlocks.MURKWOOD_PRESSURE_PLATE);
+
+        buttonBlock(((ButtonBlock) ModBlocks.MURKWOOD_BUTTON.get()),
+                blockTexture(ModBlocks.MURKWOOD_PLANKS.get())
+        );
+        blockItem(ModBlocks.MURKWOOD_BUTTON);
+
+
         leavesBlock(ModBlocks.MURKWOOD_LEAVES);
         saplingBlock(ModBlocks.MURKWOOD_SAPLING);
-
-
     }
 
     private void saplingBlock(RegistryObject<Block> blockRegistryObject) {
@@ -78,7 +96,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),
-                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.tryParse("minecraft:block/leaves"),
+                models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
                         "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
     private void blockItem(RegistryObject<Block> blockRegistryObject) {

@@ -28,20 +28,20 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
         return withExistingParent(item.getId().getPath(),
-                ResourceLocation.tryParse("item/generated")).texture("layer0",
-                ResourceLocation.tryBuild(Misfortune.MOD_ID,"item/"+item.getId().getPath()));
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID,"item/"+item.getId().getPath()));
     }
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> block,String path) {
         return withExistingParent(block.getId().getPath(),
-                ResourceLocation.tryParse("item/generated")).texture("layer0",
-                ResourceLocation.tryBuild(Misfortune.MOD_ID,path+"/"+block.getId().getPath()));
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID,path+"/"+block.getId().getPath()));
     }
     private ItemModelBuilder simpleBlockItem(RegistryObject<Block> block) {
         return simpleBlockItem(block,"block");
     }
     public void fenceItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
         this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(), mcLoc("block/fence_inventory"))
-                .texture("texture", ResourceLocation.tryBuild(Misfortune.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+                .texture("texture", ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID, "block/" + ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
     }
 
 }

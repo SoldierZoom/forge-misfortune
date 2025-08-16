@@ -29,10 +29,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         woodFromLogs(consumer, ModBlocks.MURKWOOD_WOOD.get(),ModBlocks.MURKWOOD_LOG.get());
         woodFromLogs(consumer, ModBlocks.STRIPPED_MURKWOOD_WOOD.get(),ModBlocks.STRIPPED_MURKWOOD_LOG.get());
         XFromPlanks(consumer,stairBuilder(ModBlocks.MURKWOOD_STAIRS.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
-        XFromPlanks(consumer,doorBuilder(ModBlocks.MURKWOOD_DOOR.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
         XFromPlanks(consumer,slabBuilder(RecipeCategory.BUILDING_BLOCKS,ModBlocks.MURKWOOD_SLAB.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
         XFromPlanks(consumer,fenceBuilder(ModBlocks.MURKWOOD_FENCE.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
         XFromPlanks(consumer,fenceGateBuilder(ModBlocks.MURKWOOD_FENCE_GATE.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
+        XFromPlanks(consumer,doorBuilder(ModBlocks.MURKWOOD_DOOR.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
+        XFromPlanks(consumer,trapdoorBuilder(ModBlocks.MURKWOOD_TRAPDOOR.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
+        XFromPlanks(consumer,pressurePlateBuilder(RecipeCategory.REDSTONE,ModBlocks.MURKWOOD_PRESSURE_PLATE.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
+        XFromPlanks(consumer,buttonBuilder(ModBlocks.MURKWOOD_BUTTON.get(),Ingredient.of(ModBlocks.MURKWOOD_PLANKS.get())),ModBlocks.MURKWOOD_PLANKS.get());
     }
 
 

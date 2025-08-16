@@ -36,6 +36,9 @@ public class ModBlockLootTables extends BlockLootSubProvider {
                 createSlabItemTable(ModBlocks.MURKWOOD_SLAB.get()));
         this.dropSelf(ModBlocks.MURKWOOD_FENCE.get());
         this.dropSelf(ModBlocks.MURKWOOD_FENCE_GATE.get());
+        this.dropSelf(ModBlocks.MURKWOOD_TRAPDOOR.get());
+        this.dropSelf(ModBlocks.MURKWOOD_PRESSURE_PLATE.get());
+        this.dropSelf(ModBlocks.MURKWOOD_BUTTON.get());
     }
 
     @Override

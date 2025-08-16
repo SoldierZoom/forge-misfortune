@@ -24,10 +24,6 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .addTag(ModTags.Blocks.MURKWOOD_LOGS);
         this.tag(BlockTags.PLANKS)
                 .add(ModBlocks.MURKWOOD_PLANKS.get());
-        this.tag(BlockTags.LEAVES)
-                .add(ModBlocks.MURKWOOD_LEAVES.get());
-        this.tag(BlockTags.WOODEN_DOORS)
-                .add(ModBlocks.MURKWOOD_DOOR.get());
         this.tag(BlockTags.WOODEN_STAIRS)
                 .add(ModBlocks.MURKWOOD_STAIRS.get());
         this.tag(BlockTags.WOODEN_SLABS)
@@ -36,6 +32,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.MURKWOOD_FENCE.get());
         this.tag(BlockTags.FENCE_GATES)
                 .add(ModBlocks.MURKWOOD_FENCE_GATE.get());
+        this.tag(BlockTags.WOODEN_DOORS)
+                .add(ModBlocks.MURKWOOD_DOOR.get());
+        this.tag(BlockTags.WOODEN_TRAPDOORS)
+                .add(ModBlocks.MURKWOOD_TRAPDOOR.get());
+        this.tag(BlockTags.WOODEN_PRESSURE_PLATES)
+                .add(ModBlocks.MURKWOOD_PRESSURE_PLATE.get());
+        this.tag(BlockTags.WOODEN_BUTTONS)
+                .add(ModBlocks.MURKWOOD_BUTTON.get());
+
+        this.tag(BlockTags.LEAVES)
+                .add(ModBlocks.MURKWOOD_LEAVES.get());
+        this.tag(BlockTags.SAPLINGS)
+                .add(ModBlocks.MURKWOOD_SAPLING.get());
         //mod tags
         this.tag(ModTags.Blocks.MURKWOOD_LOGS)
                 .add(ModBlocks.MURKWOOD_LOG.get())

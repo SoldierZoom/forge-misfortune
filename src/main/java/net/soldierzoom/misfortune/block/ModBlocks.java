@@ -77,9 +77,30 @@ public class ModBlocks {
             ));
     public static final RegistryObject<Block> MURKWOOD_DOOR = registerBlock("murkwood_door",
             () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_DOOR)
-                    .mapColor(MapColor.DIAMOND)
+                    .mapColor(MapColor.COLOR_BLACK)
                     .strength(6F)
                     ,ModWoodTypes.MURKWOOD.setType()
+            ));
+    public static final RegistryObject<Block> MURKWOOD_TRAPDOOR = registerBlock("murkwood_trapdoor",
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_TRAPDOOR)
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(6F)
+                    ,ModWoodTypes.MURKWOOD.setType()
+            ));
+    public static final RegistryObject<Block> MURKWOOD_PRESSURE_PLATE = registerBlock("murkwood_pressure_plate",
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
+                    BlockBehaviour.Properties.copy(Blocks.WARPED_PRESSURE_PLATE)
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(1F)
+                    ,ModWoodTypes.MURKWOOD.setType()
+            ));
+    public static final RegistryObject<Block> MURKWOOD_BUTTON = registerBlock("murkwood_button",
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.WARPED_BUTTON)
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .strength(1F)
+                    ,ModWoodTypes.MURKWOOD.setType()
+                    ,30
+                    ,true
             ));
     //leaves & sapling
     public static final RegistryObject<Block> MURKWOOD_LEAVES = registerBlock("murkwood_leaves",
