@@ -1,13 +1,16 @@
-// 1.20.1	2025-06-04T02:41:20.4913283	Loot Tables
+// 1.20.1	2025-06-05T19:05:09.3213471	Loot Tables
+0eb19b1a5ad062df9b16ff6c2abbcc70f6e50f1d data/misfortune/loot_tables/blocks/murkwood_button.json
 decdedc607f0e88268a6036c5e9f46656e9cc2a6 data/misfortune/loot_tables/blocks/murkwood_door.json
 1c51507abfe47bae1e959dd536797e71ccf58d89 data/misfortune/loot_tables/blocks/murkwood_fence.json
 f8fa528bb6ff759d6c6eaf29f0b0516be4757fae data/misfortune/loot_tables/blocks/murkwood_fence_gate.json
 5a4bf70c32e5a41004e5d88ff67473822298a5a2 data/misfortune/loot_tables/blocks/murkwood_leaves.json
 b78dad4a3ed13be9fdf693bf2a5776bf85da1846 data/misfortune/loot_tables/blocks/murkwood_log.json
 89917db69b5420d2d1e9406e719f428ebda3c895 data/misfortune/loot_tables/blocks/murkwood_planks.json
+a7e6014cb2a52f21add924020642ca7db0533462 data/misfortune/loot_tables/blocks/murkwood_pressure_plate.json
 20d7e508fbf734fd7362561865d7d52eb0045e3c data/misfortune/loot_tables/blocks/murkwood_sapling.json
 6d33ea7ece89585ebbfb8370d300ba054e6b6504 data/misfortune/loot_tables/blocks/murkwood_slab.json
 86a8aa041089caed2754e312d1f451b11974f308 data/misfortune/loot_tables/blocks/murkwood_stairs.json
+6badec67a03f94ada410f00ddc8020f732211dbc data/misfortune/loot_tables/blocks/murkwood_trapdoor.json
 cecb452920513a660d8f537ac752773d893e87b9 data/misfortune/loot_tables/blocks/murkwood_wood.json
 31296d3be77f2d43435c39ede3d9dab8a359f761 data/misfortune/loot_tables/blocks/stripped_murkwood_log.json
 3691759429485fadcc7d4649e1e9c1638acb52eb data/misfortune/loot_tables/blocks/stripped_murkwood_wood.json

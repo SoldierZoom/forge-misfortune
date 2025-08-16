@@ -1,10 +1,14 @@
-// 1.20.1	2025-06-04T02:08:05.9327198	Tags for minecraft:block mod id misfortune
+// 1.20.1	2025-06-05T19:05:09.347828	Tags for minecraft:block mod id misfortune
 136359313f9aa9f133096e393d4b6e68a681f4bf data/minecraft/tags/blocks/fence_gates.json
 62483088ff3b606dc8018f4b4c22a03f8f2b4a4a data/minecraft/tags/blocks/leaves.json
 4e65e90458103191386a384b1e3240152d98e20e data/minecraft/tags/blocks/logs.json
 5b181498e39d37fc4ef092964832fbc552d62c71 data/minecraft/tags/blocks/planks.json
+3b621efb8704e18a9e76e445708652e96fdfddb9 data/minecraft/tags/blocks/saplings.json
+dc44c138977fe2daf16230f0f26ad6863e0482e2 data/minecraft/tags/blocks/wooden_buttons.json
 6d3935271b3be54f221c17a3f0ba8dca2ea552c9 data/minecraft/tags/blocks/wooden_doors.json
 343fcc49a75a7eabe72ad26ab130c41b7653e503 data/minecraft/tags/blocks/wooden_fences.json
+57e5a6aba49dca1d73ee6fcabe2df513516035f2 data/minecraft/tags/blocks/wooden_pressure_plates.json
 0677549c8184eb1e980ae29f532045f63099409d data/minecraft/tags/blocks/wooden_slabs.json
 7126f3b44a45001ebc990a183e5a6d9586586fe2 data/minecraft/tags/blocks/wooden_stairs.json
+3c0c5d92ab65caecaef3ce17e0c8c1008c56d607 data/minecraft/tags/blocks/wooden_trapdoors.json
 ea723649ea5be49f5750ec96f3ac34fb60644180 data/misfortune/tags/blocks/murkwood_logs.json

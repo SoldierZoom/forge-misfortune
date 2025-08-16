@@ -14,6 +14,10 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.soldierzoom.misfortune.block.ModBlocks;
+import net.soldierzoom.misfortune.cmds.ModCmds;
+import net.soldierzoom.misfortune.curse.capability.AttachCurseCapability;
+import net.soldierzoom.misfortune.curse.setup.CurseAssignment;
+import net.soldierzoom.misfortune.curse.setup.CursePersistsOnDeath;
 import net.soldierzoom.misfortune.item.ModCreativeModeTab;
 import net.soldierzoom.misfortune.item.ModItems;
 import net.soldierzoom.misfortune.util.ModWoodTypes;
@@ -44,6 +48,12 @@ public class Misfortune {
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
+
+        MinecraftForge.EVENT_BUS.register(new AttachCurseCapability());
+        MinecraftForge.EVENT_BUS.register(new CurseAssignment());
+        MinecraftForge.EVENT_BUS.register(new CursePersistsOnDeath());
+
+        //MinecraftForge.EVENT_BUS.register(new ModCmds());
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
