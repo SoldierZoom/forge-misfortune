@@ -1,4 +1,4 @@
-package net.soldierzoom.misfortune.event;
+package net.soldierzoom.misfortune.events;
 
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -8,10 +8,11 @@ import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
+import net.soldierzoom.misfortune.Misfortune;
 import net.soldierzoom.misfortune.curse.capability.PlayerCurse;
 import net.soldierzoom.misfortune.curse.main.CurseType;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = Misfortune.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
     //blindness curse
     //applies blindness every sec if player has blindness curse
