@@ -77,7 +77,7 @@ public class CurseCommand {
 
         Collection<? extends ServerPlayer> targets = EntityArgument.getPlayers(context, "players");
         for (ServerPlayer player : targets) {
-            PlayerCurse.get(player).set(newCurse);
+            PlayerCurse.setAndSync(newCurse, player);
         }
         return targets.size();
     }
@@ -94,7 +94,7 @@ public class CurseCommand {
         }
         //gets player to change curse type for
         ServerPlayer player = Objects.requireNonNull(context.getSource().getPlayer());
-        PlayerCurse.get(player).set(newCurse);
+        PlayerCurse.setAndSync(newCurse, player);
         return 1;
     }
 

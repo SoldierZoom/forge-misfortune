@@ -20,8 +20,7 @@ public class CurseAssignment {
 
         if (!PlayerCurse.isAssigned(sp)) {
             CurseType picked = pickRandom(sp.getRandom());
-            PlayerCurse.get(sp).set(picked);
-            // Step 5 later: send a sync packet to this client.
+            PlayerCurse.setAndSync(picked, sp);
         }
     }
 

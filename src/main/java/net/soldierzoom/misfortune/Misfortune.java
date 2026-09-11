@@ -43,8 +43,6 @@ public class Misfortune {
         ModTrunkPlacerTypes.register(modEventBus);
         ModFoliagePlacers.register(modEventBus);
 
-        modEventBus.addListener(this::commonSetup);
-
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
 
@@ -52,10 +50,6 @@ public class Misfortune {
         MinecraftForge.EVENT_BUS.register(new CurseAssignment());
         MinecraftForge.EVENT_BUS.register(new CursePersistsOnDeath());
     }
-
-    private void commonSetup(final FMLCommonSetupEvent event) {
-    }
-
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
 
