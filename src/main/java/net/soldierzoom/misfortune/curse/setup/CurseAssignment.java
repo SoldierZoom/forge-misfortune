@@ -6,6 +6,8 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.soldierzoom.misfortune.curse.capability.PlayerCurse;
 import net.soldierzoom.misfortune.curse.main.CurseType;
+import net.soldierzoom.misfortune.network.ModNetwork;
+import net.soldierzoom.misfortune.network.S2C_CurseSyncPacket;
 
 public class CurseAssignment {
     private static final CurseType[] POOL = {
@@ -21,6 +23,12 @@ public class CurseAssignment {
         if (!PlayerCurse.isAssigned(sp)) {
             CurseType picked = pickRandom(sp.getRandom());
             PlayerCurse.setAndSync(picked, sp);
+        } else {
+            //update client
+            ModNetwork.sentToClient(
+                    new S2C_CurseSyncPacket(PlayerCurse.get(sp).get()),
+                    sp
+            );
         }
     }
 
