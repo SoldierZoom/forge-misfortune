@@ -25,7 +25,7 @@ public class CurseAssignment {
             PlayerCurse.setAndSync(picked, sp);
         } else {
             //update client
-            ModNetwork.sentToClient(
+            ModNetwork.sendToClient(
                     new S2C_CurseSyncPacket(PlayerCurse.get(sp).get()),
                     sp
             );

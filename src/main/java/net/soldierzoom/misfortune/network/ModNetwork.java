@@ -27,7 +27,7 @@ public class ModNetwork {
     }
 
     //sends msg from server to specified player's client
-    public static void sentToClient(Object msg, ServerPlayer sp) {
+    public static void sendToClient(Object msg, ServerPlayer sp) {
         INSTANCE.send(PacketDistributor.PLAYER.with(()->sp),msg);
     }
 }

@@ -22,7 +22,7 @@ public class PlayerCurse {
         get(sp).set(curse);//set curse server side
 
         //sync with client
-        ModNetwork.sentToClient(
+        ModNetwork.sendToClient(
                 new S2C_CurseSyncPacket(curse),
                 sp
         );
