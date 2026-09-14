@@ -1,0 +1,15 @@
+{
+    "targets": [ "swap" ],
+    "passes": [
+        {
+            "name": "misfortune:blind",
+            "intarget": "minecraft:main",
+            "outtarget": "swap"
+        },
+        {
+            "name": "minecraft:blit",
+            "intarget": "swap",
+            "outtarget": "minecraft:main"
+        }
+    ]
+}

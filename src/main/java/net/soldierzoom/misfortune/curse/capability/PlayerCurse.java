@@ -14,6 +14,10 @@ public class PlayerCurse {
         );
     }
 
+    public static ICurse getOrNull(Player p) {
+        return p.getCapability(CurseCapability.CURSE).orElse(null);
+    }
+
     public static boolean isAssigned(Player p) {
         return get(p).isAssigned();
     }
