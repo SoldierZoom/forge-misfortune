@@ -31,7 +31,7 @@ public class ModEvents {
             if (curse == CurseType.BLINDNESS) {
                 player.addEffect(new MobEffectInstance(
                         MobEffects.BLINDNESS,
-                        40, 0,
+                        120, 0,
                         false, false,
                         false
                 ));
