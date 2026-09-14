@@ -2,8 +2,10 @@ package net.soldierzoom.misfortune.curse.capability;
 
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
+import net.minecraftforge.common.MinecraftForge;
 import net.soldierzoom.misfortune.curse.main.CurseType;
 import net.soldierzoom.misfortune.curse.main.ICurse;
+import net.soldierzoom.misfortune.events.CurseChangedEvent;
 import net.soldierzoom.misfortune.network.ModNetwork;
 import net.soldierzoom.misfortune.network.S2C_CurseSyncPacket;
 
@@ -24,6 +26,9 @@ public class PlayerCurse {
 
     public static void setAndSync(CurseType curse, ServerPlayer sp) {
         get(sp).set(curse);//set curse server side
+
+        //post event
+        MinecraftForge.EVENT_BUS.post(new CurseChangedEvent(sp, curse));
 
         //sync with client
         ModNetwork.sendToClient(

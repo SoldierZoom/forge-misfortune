@@ -19,35 +19,33 @@ import net.soldierzoom.misfortune.curse.main.ICurse;
 public class ModClientEvents {
     private static boolean shaderActive = false;
 
-    private static final ResourceLocation CURSE_SHADER =
+    private static final ResourceLocation BLIND_SHADER =
             ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID, "shaders/post/blind.json");
-    //blindness
-    @SubscribeEvent
-    public static void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase != TickEvent.Phase.END) return;
 
-        Minecraft mc = Minecraft.getInstance();
-        if (mc.player == null) return;
-        ICurse curse = PlayerCurse.getOrNull(mc.player);
-        if (curse == null) return;
-
-        Boolean shouldBeActive = curse.get()==CurseType.BLINDNESS;
-
-
-        if (shouldBeActive && !shaderActive) {
-            mc.gameRenderer.loadEffect(CURSE_SHADER);
-            shaderActive = true;
-        }
-
-        if (!shouldBeActive && shaderActive) {
+    //helper func
+    private static void toggleBlindShader(Minecraft mc) {
+        if (shaderActive) {
+            mc.gameRenderer.loadEffect(BLIND_SHADER);
+        } else {
             mc.gameRenderer.shutdownEffect();
             shaderActive = false;
         }
     }
+
+    //blindness curse
     @SubscribeEvent
-    public static void onLoggedOut(ClientPlayerNetworkEvent.LoggingOut event) {
-        shaderActive = false;
+    public static void onCurseChange(CurseChangedEvent event) {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.player == null || mc.player!=event.getPlayer()) return;
+
+        shaderActive = event.getCurse()==CurseType.BLINDNESS;
+        toggleBlindShader(mc);
     }
+    @SubscribeEvent
+    public static void onLoggedIn(ClientPlayerNetworkEvent.LoggingIn event) {
+        toggleBlindShader(Minecraft.getInstance());
+    }
+
     //can't feel curse
     @SubscribeEvent
     public static void onRenderOverlay(RenderGuiOverlayEvent.Pre event) {

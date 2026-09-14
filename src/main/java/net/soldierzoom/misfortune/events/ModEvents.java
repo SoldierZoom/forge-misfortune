@@ -4,8 +4,9 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
+import net.minecraftforge.event.entity.living.MobEffectEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.soldierzoom.misfortune.Misfortune;
@@ -14,48 +15,42 @@ import net.soldierzoom.misfortune.curse.main.CurseType;
 
 @Mod.EventBusSubscriber(modid = Misfortune.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
+    private static final MobEffectInstance PERMA_BLINDNESS = new MobEffectInstance(
+            MobEffects.BLINDNESS,
+            MobEffectInstance.INFINITE_DURATION,
+            0,
+            false,
+            false,
+            false
+    );
+
     //blindness curse
-    //applies blindness every sec if player has blindness curse
+    //applies blindness upon curse change
     @SubscribeEvent
-    public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        //only does at end of tick
-        if (event.phase != TickEvent.Phase.END) return;
+    public static void onCurseChange(CurseChangedEvent event) {
+        if (!(event.getPlayer() instanceof ServerPlayer player)) return;
 
-        //makes sure to apply server side
-        if (!(event.player instanceof ServerPlayer player)) return;
-
-        //apply ever sec
-        if (player.tickCount % 20 == 0) {
-            CurseType curse = PlayerCurse.get(player).get();
-            //add blindness
-            if (curse == CurseType.BLINDNESS) {
-                player.addEffect(new MobEffectInstance(
-                        MobEffects.BLINDNESS,
-                        120, 0,
-                        false, false,
-                        false
-                ));
-            }
+        if(event.getCurse()==CurseType.BLINDNESS) {
+            player.addEffect(PERMA_BLINDNESS);
+        } else {
+            player.removeEffect(MobEffects.BLINDNESS);
         }
     }
-    //prevents milk bucket clearing effect
+    //reapply on respawn
     @SubscribeEvent
-    public static void onMilkBucketFinish(LivingEntityUseItemEvent.Finish event) {
+    public static void onRespawn(PlayerEvent.PlayerRespawnEvent event) {
+        if (!(event.getEntity() instanceof ServerPlayer player)) return;
+        if(PlayerCurse.get(player).get()==CurseType.BLINDNESS) {
+            player.addEffect(PERMA_BLINDNESS);
+        }
+    }
+    //re-add blindness when any effects removed
+    @SubscribeEvent
+    public static void onEffectsClear(MobEffectEvent.Remove event) {
         if (!(event.getEntity() instanceof ServerPlayer player)) return;
 
-        if (event.getItem().is(Items.MILK_BUCKET)) {
-            CurseType curse = PlayerCurse.get(player).get();
-
-            if (curse == CurseType.BLINDNESS) {
-                player.addEffect(new MobEffectInstance(
-                        MobEffects.BLINDNESS,
-                        40,
-                        0,
-                        false,
-                        false,
-                        false
-                ));
-            }
+        if(PlayerCurse.get(player).get()==CurseType.BLINDNESS&&event.getEffect()==MobEffects.BLINDNESS) {
+            event.setCanceled(true);
         }
     }
 }
