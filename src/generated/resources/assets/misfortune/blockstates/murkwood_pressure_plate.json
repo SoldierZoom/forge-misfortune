@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "misfortune:block/murkwood_pressure_plate"
+    },
+    "powered=true": {
+      "model": "misfortune:block/murkwood_pressure_plate_down"
+    }
+  }
+}

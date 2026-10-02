@@ -21,10 +21,10 @@ public class ModBiomeModifiers {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
         var biomes = context.lookup(Registries.BIOME);
 
-        context.register(ADD_TREE_MURKWOOD, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
+        /*context.register(ADD_TREE_MURKWOOD, new ForgeBiomeModifiers.AddFeaturesBiomeModifier(
                 biomes.getOrThrow(Tags.Biomes.IS_PLAINS),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.MURKWOOD_PLACED_KEY)),
-                GenerationStep.Decoration.VEGETAL_DECORATION));
+                GenerationStep.Decoration.VEGETAL_DECORATION));*/
     }
 
     private static ResourceKey<BiomeModifier> registerKey(String name) {

@@ -13,5 +13,11 @@
   "block.misfortune.murkwood_sapling": "Murkwood Sapling",
   "block.misfortune.murkwood_planks": "Murkwood Planks",
   "block.misfortune.murkwood_stairs": "Murkwood Stairs",
-  "block.misfortune.murkwood_door": "Murkwood Door"
+  "block.misfortune.murkwood_slab": "Murkwood Slab",
+  "block.misfortune.murkwood_fence": "Murkwood Fence",
+  "block.misfortune.murkwood_fence_gate": "Murkwood Fence Gate",
+  "block.misfortune.murkwood_door": "Murkwood Door",
+  "block.misfortune.murkwood_trapdoor": "Murkwood Trapdoor",
+  "block.misfortune.murkwood_pressure_plate": "Murkwood Pressure Plate",
+  "block.misfortune.murkwood_button": "Murkwood Button"
 }

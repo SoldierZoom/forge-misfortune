@@ -66,12 +66,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID,"block/murkwood_door_top"),
                 "cutout"
         );
-        trapdoorBlockWithRenderType(((TrapDoorBlock) ModBlocks.MURKWOOD_TRAPDOOR.get()),
-                ResourceLocation.fromNamespaceAndPath(Misfortune.MOD_ID,"block/murkwood_trapdoor"),
-                true,
-                "cutout"
-        );
-        blockItem(ModBlocks.MURKWOOD_TRAPDOOR);
+        trapdoorBlock(ModBlocks.MURKWOOD_TRAPDOOR);
 
 
         pressurePlateBlock(((PressurePlateBlock) ModBlocks.MURKWOOD_PRESSURE_PLATE.get()),
@@ -79,11 +74,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         );
         blockItem(ModBlocks.MURKWOOD_PRESSURE_PLATE);
 
-        buttonBlock(((ButtonBlock) ModBlocks.MURKWOOD_BUTTON.get()),
-                blockTexture(ModBlocks.MURKWOOD_PLANKS.get())
-        );
-        blockItem(ModBlocks.MURKWOOD_BUTTON);
-
+        buttonBlock(ModBlocks.MURKWOOD_BUTTON,blockTexture(ModBlocks.MURKWOOD_PLANKS.get()));
 
         leavesBlock(ModBlocks.MURKWOOD_LEAVES);
         saplingBlock(ModBlocks.MURKWOOD_SAPLING);
@@ -93,12 +84,30 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(blockRegistryObject.get(),
                 models().cross(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
-
     private void leavesBlock(RegistryObject<Block> blockRegistryObject) {
         simpleBlockWithItem(blockRegistryObject.get(),
                 models().singleTexture(ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath(), ResourceLocation.parse("minecraft:block/leaves"),
                         "all", blockTexture(blockRegistryObject.get())).renderType("cutout"));
     }
+    private void trapdoorBlock(RegistryObject<Block> blockRegistryObject) {
+        trapdoorBlockWithRenderType(((TrapDoorBlock) blockRegistryObject.get()),
+                blockTexture(blockRegistryObject.get()),
+                true,
+                "cutout"
+        );
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(Misfortune.MOD_ID + ":block/" +
+                ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath() + "_bottom"));
+    }
+    private void buttonBlock(RegistryObject<Block> blockRegistryObject, ResourceLocation buttonTexture) {
+        String name = ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath();
+        buttonBlock(((ButtonBlock) blockRegistryObject.get()), buttonTexture);//creates block model for in game
+        models().withExistingParent(name + "_inventory", mcLoc("block/button_inventory"))
+                .texture("texture", buttonTexture);//creates button block model for inventory
+        simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(Misfortune.MOD_ID + ":block/" +
+                name + "_inventory"));//creates item model
+    }
+
+
     private void blockItem(RegistryObject<Block> blockRegistryObject) {
         simpleBlockItem(blockRegistryObject.get(), new ModelFile.UncheckedModelFile(Misfortune.MOD_ID +
                 ":block/" + ForgeRegistries.BLOCKS.getKey(blockRegistryObject.get()).getPath()));

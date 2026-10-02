@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "misfortune:murkwood_planks"
+    }
+  ],
+  "result": {
+    "item": "misfortune:murkwood_button"
+  }
+}
