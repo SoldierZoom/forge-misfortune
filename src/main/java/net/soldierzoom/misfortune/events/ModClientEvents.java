@@ -46,6 +46,20 @@ public class ModClientEvents {
         toggleBlindShader(Minecraft.getInstance());
     }
 
+    //deafness curse
+    @SubscribeEvent
+    public static void onPlaySound(PlaySoundEvent event) {
+        Minecraft mc = Minecraft.getInstance();
+        if (mc.player == null) return;
+        ICurse curse = PlayerCurse.getOrNull(mc.player);
+        if (curse == null) return;
+
+        if (curse.get() == CurseType.DEAFNESS && event.getSound() != null
+                && event.getSound().getSource() != net.minecraft.sounds.SoundSource.MUSIC) {
+            event.setSound(null);
+        }
+    }
+
     //can't feel curse
     @SubscribeEvent
     public static void onRenderOverlay(RenderGuiOverlayEvent.Pre event) {
